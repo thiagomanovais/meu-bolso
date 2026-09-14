@@ -27,6 +27,8 @@ def Gastos():
             break
     return gastos
 
-
-x1 = Gastos()
-print(x1)
+if __name__ == "__main__":
+    gastos_cadastrados = Gastos()
+    print("Gastos registrados:")
+    for id, gasto in gastos_cadastrados.items():
+        print(f"ID: {id}, Nome: {gasto['nome']}, Valor: €{gasto['valor']:.2f}, Tipo: {gasto['tipo']}, Descrição: {gasto['descrição']}, Categoria: {gasto['categoria']}")
